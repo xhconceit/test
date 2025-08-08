@@ -1,10 +1,19 @@
 name: CI
 
 on:
-  push:
-    branches:
-      - "*"
+  # push:
+  #   branches:
+  #     - "*"
   workflow_dispatch:
+    inputs: 
+      env:
+        description: "Env to build"
+        required: true
+        default: "dev"
+        type: choice
+        options:
+          - dev
+          - prod
 
 jobs:
   ci:
