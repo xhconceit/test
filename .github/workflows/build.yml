@@ -14,6 +14,16 @@ on:
         options:
           - dev
           - prod
+      deploy:
+        description: "Deploy to env"
+        required: true
+        default: "false"
+        type: boolean
+      note:
+        description: "Note to build"
+        required: false
+        default: ""
+        type: string
 
 jobs:
   ci:
