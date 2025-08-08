@@ -24,6 +24,11 @@ on:
         required: false
         default: ""
         type: string
+      time:
+        description: "time to build"
+        required: false
+        default: 10
+        type: number
 
 jobs:
   ci:
